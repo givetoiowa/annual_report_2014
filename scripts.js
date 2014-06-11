@@ -5,8 +5,9 @@
 $(function() {
 	// randomize slide order on page load
 	var order_options = ['original-order', 'name', 'category'];
-	var sortValue = order_options[Math.floor(Math.random()*order_options.length)];
-	console.log(sortValue);
+	//var sortValue = order_options[Math.floor(Math.random()*order_options.length)];
+    var sortValue = 'original-order'; // since people don't like the randomized order
+
 	// initialize isotope 
 	var $container = $('#container').isotope({
 		itemSelector: '.slide',
@@ -25,4 +26,7 @@ $(function() {
 		}
 	});
 
+    $('.slide').hover(function(){
+        $('.sentence').toggle();;
+    })
 });
