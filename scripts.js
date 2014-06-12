@@ -26,36 +26,44 @@ $(function() {
 		}
 	});
 
-    $('.slide.leaders').hover(function(){
-        $('.sentence').toggle();
-        $('.slide.leaders .name').css({
-            width: '240px',
-            height: '160px',
-            margin: '10px 0 0 -15px',
-            transition: 'all 0.7s ease'
-        })
-        $('.slide.leaders .name h3').css({
-            display: 'none',
-            transition: 'all 0.7s ease'
+    function slide_hover_animation(target){
+        var $nameBG = target + ' .name';
+        var $heading = target + ' .name h3';
+        var $sentence = target + ' .name p';
+        $(target).hover(function(){
+            console.log($heading);
+            $($nameBG).css({
+                width: '240px',
+                height: '160px',
+                margin: '10px 0 0 -15px',
+                transition: 'all 0.7s ease'
+            })
+            $($heading).css({
+                display: 'none',
+                transition: 'all 0.7s ease'
+            });
+            $($sentence).css({
+                display: 'block',
+                transition: 'all 0 7s ease'
+            });
+        }, function(){
+            $(target + '.name').css({
+                width: '100%',
+                height: '60px',
+                margin: '240px 0 0 0',
+                transition: 'all 0.7s ease'
+            });
+            $(target + '.name h3').css({
+                display: 'block',
+                transition: 'all 0.7s ease'
+            });
+            $(target + '.name p').css({
+                display: 'none',
+                transition: 'all 0.7s ease'
+            });
         });
-        $('.slide.leaders .name p').css({
-            display: 'block',
-            transition: 'all 0 7s ease'
-        });
-    }, function(){
-        $('.slide.leaders .name').css({
-            width: '100%',
-            height: '60px',
-            margin: '240px 0 0 0',
-            transition: 'all 0.7s ease'
-        });
-        $('.slide.leaders .name h3').css({
-            display: 'block',
-            transition: 'all 0.7s ease'
-        });
-        $('.slide.leaders .name p').css({
-            display: 'none',
-            transition: 'all 0.7s ease'
-        });
-    });
+    }
+    
+    var $leaders = '.slide.leaders';
+    slide_hover_animation($leaders);
 });
