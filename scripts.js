@@ -47,23 +47,23 @@ $(function() {
                 transition: 'all 0 7s ease'
             });
         }, function(){
-            $(target + '.name').css({
+            $($nameBG).css({
                 width: '100%',
                 height: '60px',
                 margin: '240px 0 0 0',
                 transition: 'all 0.7s ease'
             });
-            $(target + '.name h3').css({
+            $($heading).css({
                 display: 'block',
                 transition: 'all 0.7s ease'
             });
-            $(target + '.name p').css({
+            $($sentence).css({
                 display: 'none',
                 transition: 'all 0.7s ease'
             });
         });
     }
-    
+
     var $leaders = '.slide.leaders';
     slide_hover_animation($leaders);
 });
