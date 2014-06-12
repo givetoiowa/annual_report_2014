@@ -26,7 +26,36 @@ $(function() {
 		}
 	});
 
-    $('.slide').hover(function(){
-        $('.sentence').toggle();;
-    })
+    $('.slide.leaders').hover(function(){
+        $('.sentence').toggle();
+        $('.slide.leaders .name').css({
+            width: '240px',
+            height: '160px',
+            margin: '10px 0 0 -15px',
+            transition: 'all 0.7s ease'
+        })
+        $('.slide.leaders .name h3').css({
+            display: 'none',
+            transition: 'all 0.7s ease'
+        });
+        $('.slide.leaders .name p').css({
+            display: 'block',
+            transition: 'all 0 7s ease'
+        });
+    }, function(){
+        $('.slide.leaders .name').css({
+            width: '100%',
+            height: '60px',
+            margin: '240px 0 0 0',
+            transition: 'all 0.7s ease'
+        });
+        $('.slide.leaders .name h3').css({
+            display: 'block',
+            transition: 'all 0.7s ease'
+        });
+        $('.slide.leaders .name p').css({
+            display: 'none',
+            transition: 'all 0.7s ease'
+        });
+    });
 });
