@@ -37,6 +37,7 @@ nav h3 {
 
 nav ul {
 	float:right;
+    margin-top:12px;
 	list-style-type: none;
 }
 
@@ -53,7 +54,7 @@ nav ul li a {
 .layout2.isotope-wrapper h1{
 	max-width:1100px;}
 
-.isotope-wrapper h1{
+.isotope-wrapper h1 {
 	max-width:1050px;
 	min-width: 250px;
 	text-transform: uppercase;
@@ -62,6 +63,15 @@ nav ul li a {
 	font-weight: 100;
 	color:#222;
 	margin:50px auto 10px auto;}
+
+.content h1 {
+    text-transform: uppercase;
+    text-align: center;
+    font-size:28px;
+    font-weight: 100;
+    color:#666;
+    margin:50px auto 10px auto;
+    padding-top:20px;}
 
 /* isotope masonry stuff */
 .layout2.isotope {
@@ -76,7 +86,7 @@ nav ul li a {
 
 .isotope:after {
 	content: '';
-	display: block;
+	display: block;/home/benzshawel/www/wp-content/themes/common_3.5/stylesheets
 	clear: both;}
 .double {
     width:630px;
@@ -92,7 +102,7 @@ nav ul li a {
 .slide {
     -webkit-transition: all 0.6s ease;
     -moz-transition: all 0.6s ease;
-    -o-transition: all 0.6s ease;
+    -o-transition: all 0.6s ease;/home/benzshawel/www/wp-content/themes/common_3.5/stylesheets
     -ms-transition: all 0.6s ease;
     transition: all 0.6s ease;}
 
@@ -175,6 +185,73 @@ nav ul li a {
 
 .newSlide {
 	background-color:rgba(75, 180, 152, 0.75);}
+
+/* interior styles */
+.content-wrapper.wynn {
+    background: url('images/temp_wyn_bg.jpg') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;}
+.content-wrapper.best {
+    background-color:#000;
+}
+.content {
+    width:1000px;
+    height:100%;
+    min-height:1000px;
+    margin:50px auto 0 auto;
+    display:block;
+    background-color:#F9F6E8;
+}
+.column {
+    padding:10px;
+}
+.left.column {
+    float:left;
+    width:54%;
+    margin:2% 1% 2% 2%;
+}
+
+.right.column {
+    float:right;
+    width:38%;
+    margin:2% 2% 2% 1%;
+}
+
+.right.column img {
+    width:360px;
+    height:auto;
+    margin-bottom:40px;
+}
+.left.column blockquote {
+    width:88%;
+    padding:10px;
+    margin:5px auto;
+    display: block;
+    line-height: 28px;
+    font-size:24px;
+    font-family: 'Lora', serif;
+    font-style:italic;}
+
+.left.column .citation {
+    width:55%;
+    min-height:50px;
+    float:left;
+    margin:0 225px 25px 15px ;
+    font-size:12px;
+    line-height: 20px;}
+
+.left.column p {
+    line-height:26px;
+}
+
+.wynnCar {
+    width:90%;
+    height:auto;
+    margin:0px auto;
+    display: block;
+    padding-top: 35px;}
 
 /* footer */
 footer {
